@@ -32,19 +32,10 @@ class dcgGetPluginData{
 		if ($response && is_array($response)) {
 			$decoded_data = json_decode($response['body'] );
 			if($decoded_data && is_object($decoded_data)) {
-				//echo $decoded_data->name;
-				$url = getimagesize("https://ps.w.org/{$decoded_data->slug}/assets/icon-128x128.png");
-				if(!is_array($url)) {
-					$image_path = plugins_url( $default_images[rand(0, 1)], __FILE__ );
-					$image = "<img src='{$image_path}' style='width: 126px;height: 126px;'/>";
-				}
-				else {
-					$image = "<img src='https://ps.w.org/{$decoded_data->slug}/assets/icon-128x128.png' style='width: 126px;height: 126px;'/>";
-				}
-				$stars_path = plugins_url( 'stars.png', __FILE__ );
-				$stars_holder_style = "position: relative;height: 17px;width: 92px;background: url($stars_path) repeat-x bottom left; vertical-align: top; display:inline-block;";
-				$stars_rating_style = "background: url($stars_path) repeat-x top left; height: 17px;float: left;text-indent: 100%;overflow: hidden;white-space: nowrap; width: {$decoded_data->rating}%";
-				$stars_rating_value = floor($decoded_data->rating/20);
+				$rating_stars_path = plugins_url( 'rating_stars.png', __FILE__ );
+				$rating_stars_holder_style = "position: relative;height: 17px;width: 92px;background: url($rating_stars_path) repeat-x bottom left; vertical-align: top; display:inline-block;";
+				$rating_stars_style = "background: url($rating_stars_path) repeat-x top left; height: 17px;float: left;text-indent: 100%;overflow: hidden;white-space: nowrap; width: {$decoded_data->rating}%";
+				$rating_stars_value = floor($decoded_data->rating/20);
 				$release_date = date("d F Y", strtotime($decoded_data->added));
 				$last_updated_date = date("d F Y", strtotime($decoded_data->last_updated));
 				$wordpress_page = "https://wordpress.org/plugins/{$decoded_data->slug}";
@@ -57,8 +48,8 @@ class dcgGetPluginData{
 								<div class='dcg-downloaded'><span style='width: 27%; display: inline-block;'>Downloads:</span>{$decoded_data->downloaded}</div>
 								<div class='dcg-last_updated'><span style='width: 27%; display: inline-block;'>Last Updated:</span>{$last_updated_date}</div>
 								<div class='dcg-rating'><span style='width: 27%; display: inline-block;'>Rating:</span>
-										<div class='dcg-star-holder' style='{$stars_holder_style}'>
-											<div class='dcg-star-rating' style='{$stars_rating_style}'>{$stars_rating_value}</div>
+										<div class='dcg-rating-stars-holder' style='{$rating_stars_holder_style}'>
+											<div class='dcg-rating-stars' style='{$rating_stars_style}'>{$rating_stars_value}</div>
 										</div>
 										<span class='dcg-ratings-count' style='margin-left:4px;'>({$decoded_data->num_ratings})</span>
 								</div>
