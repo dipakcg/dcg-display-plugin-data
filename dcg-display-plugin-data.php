@@ -36,6 +36,14 @@ class dcgGetPluginData{
 				$rating_stars_holder_style = "position: relative;height: 17px;width: 92px;background: url($rating_stars_path) repeat-x bottom left; vertical-align: top; display:inline-block;";
 				$rating_stars_style = "background: url($rating_stars_path) repeat-x top left; height: 17px;float: left;text-indent: 100%;overflow: hidden;white-space: nowrap; width: {$decoded_data->rating}%";
 				$rating_stars_value = floor($decoded_data->rating/20);
+				// Count average rating
+				$stars = array();
+				foreach ($decoded_data->ratings as $value) {
+				    $stars[] = $value;
+				}
+				$calculate_average_rating = ((($stars[0] * 5) + ($stars[1] * 4) + ($stars[2] * 3) + ($stars[3] * 2) + ($stars[4] * 1)) / $decoded_data->num_ratings);
+				// Format rating. Eg: 4.7 out of 5 stars, but 5 (no decimal) out of 5 stars
+				$average_rating = ( is_float($calculate_average_rating) ? number_format($calculate_average_rating, 1) : $calculate_average_rating );
 				$release_date = date("d F Y", strtotime($decoded_data->added));
 				$last_updated_date = date("d F Y", strtotime($decoded_data->last_updated));
 				$wordpress_page = "https://wordpress.org/plugins/{$decoded_data->slug}";
@@ -51,7 +59,7 @@ class dcgGetPluginData{
 										<div class='dcg-rating-stars-holder' style='{$rating_stars_holder_style}'>
 											<div class='dcg-rating-stars' style='{$rating_stars_style}'>{$rating_stars_value}</div>
 										</div>
-										<span class='dcg-ratings-count' style='margin-left:4px;'>({$decoded_data->num_ratings})</span>
+										<span class='dcg-average-rating' style='margin-left:4px;'>($average_rating out of 5 stars)</span>
 								</div>
 								<div class='dcg-download-link'><span style='width: 27%; display: inline-block;'>Download Link:</span><a href='{$decoded_data->download_link}' target='_blank' style='border: 0px; '>Click here</a></div>
 							</div>
