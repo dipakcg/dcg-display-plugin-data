@@ -66,22 +66,22 @@ class dcgGetPluginData{
 					  </div>";
 
 				if ($a['description'] == "true") {
-				$data .= "<h2 style='padding-top: 20px; color: #6296c8;'>Description:</h2>
+				$data .= "<h2 style='padding-top: 2%;'>Description:</h2>
 					  {$decoded_data->sections->description}";
 				}
 
 				if ($a['installation'] == "true") {
-				$data .= "<h2 style='padding-top: 20px; color: #6296c8;'>Installation:</h2>
+				$data .= "<h2 style='padding-top: 2%;'>Installation:</h2>
 					  {$decoded_data->sections->installation}";
 				}
 
 				if ($a['faq'] == "true") {
-				$data .= "<h2 style='padding-top: 20px; color: #6296c8;'>FAQ:</h2>
+				$data .= "<h2 style='padding-top: 2%;'>FAQ:</h2>
 					  {$decoded_data->sections->faq}";
 				}
 
 				if ($a['screenshots'] == "true") {
-				$data .= "<h2 style='padding-top: 20px; color: #6296c8;'>Screenshot(s):</h2>
+				$data .= "<h2 style='padding-top: 2%;'>Screenshot(s):</h2>
 					  {$decoded_data->sections->screenshots}";
 				}
 			}
