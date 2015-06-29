@@ -42,6 +42,7 @@ class dcgGetPluginData{
 				    $stars[] = $value;
 				}
 				$calculate_average_rating = ((($stars[0] * 5) + ($stars[1] * 4) + ($stars[2] * 3) + ($stars[3] * 2) + ($stars[4] * 1)) / $decoded_data->num_ratings);
+				if (empty($calculate_average_rating)) { $calculate_average_rating = 0; }
 				// Format rating. Eg: 4.7 out of 5 stars, but 5 (no decimal) out of 5 stars
 				$average_rating = ( is_float($calculate_average_rating) ? number_format($calculate_average_rating, 1) : $calculate_average_rating );
 				$release_date = date("d F Y", strtotime($decoded_data->added));
