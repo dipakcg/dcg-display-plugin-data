@@ -5,7 +5,7 @@
  * Description: Display plugin data (from wordpress.org) into pages / posts using simple shortcode.
  * Version: 1.1
  * Author: Dipak C. Gajjar
- * Author URI: http://dipakgajjar.com
+ * Author URI: https://dipakgajjar.com
  * License: GPLv2 or later
  */
 defined('ABSPATH') or die("Script Error!");
