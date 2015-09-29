@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: DCG Display Plugin Data (from wordpress.org)
- * Plugin URI: http://dipakgajjar.com
+ * Plugin URI: https://github.com/dipakcg/dcg-display-plugin-data
  * Description: Display plugin data (from wordpress.org) into pages / posts using simple shortcode.
  * Version: 1.1
  * Author: Dipak C. Gajjar
