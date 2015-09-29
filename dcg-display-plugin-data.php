@@ -3,7 +3,7 @@
  * Plugin Name: DCG Display Plugin Data (from wordpress.org)
  * Plugin URI: http://dipakgajjar.com
  * Description: Display plugin data (from wordpress.org) into pages / posts using simple shortcode.
- * Version: 1.0
+ * Version: 1.1
  * Author: Dipak C. Gajjar
  * Author URI: http://dipakgajjar.com
  * License: GPLv2 or later
