@@ -3,8 +3,8 @@ Contributors: dipakcg
 Tags: plugin-api, plugins, api, promote, info, directory, specs, developer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3S8BRPLWLNQ38
 Requires at least: 3.5
-Tested up to: 4.2.2
-Stable tag: 1.0
+Tested up to: 4.5
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,9 @@ This plugin display WordPress.org plugin data such as version, requires and comp
 * Correct slug: dcg-display-plugin-data
 * Wrong slug: DCG Display Plugin Data
 
-**P.S. It is aways the best policy to open a [support thread](http://wordpress.org/support/plugin/dcg-display-plugin-data) first before posting a negative review.**
+**Follow the development of this plugin on [GitHub](https://github.com/dipakcg/dcg-display-plugin-data)**
+
+**P.S. It is always the best policy to open a [support thread](http://wordpress.org/support/plugin/dcg-display-plugin-data) first before posting any negative review.**
 
 == Installation ==
 1. Upload the 'dcg-display-plugin-data' folder to the '/wp-content/plugins/' directory
@@ -86,6 +88,10 @@ Pretty much, yeah.
 1. Sample front-end output (on page / post)
 
 == Changelog ==
+
+= 1.1, Sept 29, 2015 =
+* Updated WordPress compatibility
+* Merged with SVN repo. for easy updates
 
 = 1.0, June 27, 2015 =
 * Initial release

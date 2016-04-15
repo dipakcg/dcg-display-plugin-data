@@ -1,21 +1,18 @@
 <?php
 /**
  * Plugin Name: DCG Display Plugin Data (from wordpress.org)
- * Plugin URI: http://dipakgajjar.com
+ * Plugin URI: https://github.com/dipakcg/dcg-display-plugin-data
  * Description: Display plugin data (from wordpress.org) into pages / posts using simple shortcode.
- * Version: 1.0
+ * Version: 1.1
  * Author: Dipak C. Gajjar
- * Author URI: http://dipakgajjar.com
+ * Author URI: https://dipakgajjar.com
  * License: GPLv2 or later
  */
 defined('ABSPATH') or die("Script Error!");
-
 class dcgGetPluginData{
-
 	public function __construct(){
 		add_shortcode( 'dcg_display_plugin_data', array($this, 'display_plugin_data_from_wordpressorg') );
 	}
-
 	public function display_plugin_data_from_wordpressorg( $atts ) {
 		$a = shortcode_atts( array(
 			'name' => 'dcg-custom-logout',
@@ -65,22 +62,18 @@ class dcgGetPluginData{
 								<div class='dcg-download-link'><span style='width: 27%; display: inline-block;'>Download Link:</span><a href='{$decoded_data->download_link}' target='_blank' style='border: 0px; '>Click here</a></div>
 							</div>
 					  </div>";
-
 				if ($a['description'] == "true") {
 				$data .= "<h2 style='padding-top: 2%;'>Description:</h2>
 					  {$decoded_data->sections->description}";
 				}
-
 				if ($a['installation'] == "true") {
 				$data .= "<h2 style='padding-top: 2%;'>Installation:</h2>
 					  {$decoded_data->sections->installation}";
 				}
-
 				if ($a['faq'] == "true") {
 				$data .= "<h2 style='padding-top: 2%;'>FAQ:</h2>
 					  {$decoded_data->sections->faq}";
 				}
-
 				if ($a['screenshots'] == "true") {
 				$data .= "<h2 style='padding-top: 2%;'>Screenshot(s):</h2>
 					  {$decoded_data->sections->screenshots}";
@@ -96,8 +89,6 @@ class dcgGetPluginData{
 		return $data;
 	}
 }
-
 $dcg_display_plugin_data = new dcgGetPluginData;
-
 // END OF THE PLUGIN
 ?>
