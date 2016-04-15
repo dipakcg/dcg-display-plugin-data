@@ -3,7 +3,11 @@ Contributors: dipakcg
 Tags: plugin-api, plugins, api, promote, info, directory, specs, developer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3S8BRPLWLNQ38
 Requires at least: 3.5
+<<<<<<< HEAD
 Tested up to: 4.5
+=======
+Tested up to: 4.3.1
+>>>>>>> origin/master
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
