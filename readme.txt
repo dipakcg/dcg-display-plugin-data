@@ -88,7 +88,8 @@ Pretty much, yeah.
 == Changelog ==
 
 = 1.2, August 30, 2016 =
-* Improved code and fixed few bugs (for star ratings)
+* Improved code
+* Fixed few bugs (for star ratings)
 
 = 1.1, Sept 29, 2015 =
 * Updated WordPress compatibility
