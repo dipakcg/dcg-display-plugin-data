@@ -11,7 +11,7 @@
 defined('ABSPATH') or die("Script Error!");
 class dcgGetPluginData{
 
-	public function __construct(){
+	public function __construct() {
 		add_shortcode( 'dcg_display_plugin_data', array($this, 'display_plugin_data_from_wordpressorg') );
 	}
 
