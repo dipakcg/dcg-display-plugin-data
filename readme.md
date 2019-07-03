@@ -4,7 +4,7 @@
 ![Total Downloads](https://img.shields.io/wordpress/plugin/dt/dcg-display-plugin-data.svg?maxAge=2592000)
 ![Plugin Rating](https://img.shields.io/wordpress/plugin/r/dcg-display-plugin-data.svg?maxAge=2592000)
 ![WordPress Compatibility](https://img.shields.io/wordpress/v/dcg-display-plugin-data.svg?maxAge=2592000)
-[![Build Status](https://img.shields.io/travis/dipakcg/dcg-display-plugin-data.svg?maxAge=2592000)](https://travis-ci.org/dipakcg/dcg-display-plugin-data)
+[![Build Status](https://img.shields.io/travis/dipakcg/dcg-display-plugin-data/master.svg?maxAge=2592000)](https://travis-ci.org/dipakcg/dcg-display-plugin-data)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/dipakcg/dcg-display-plugin-data/blob/master/license.txt)
 
 This plugin display WordPress.org plugin data such as version, requires and compatible up to, release and last update date, number of downloads, rating, description, installation steps, faq and screenshots etc. into pages / posts using simple shortcode.
